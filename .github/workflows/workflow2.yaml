@@ -13,5 +13,8 @@ jobs:
       uses : actions/checkout@v4
     - run: echo "🍏 This job's status is ${{ job.status }}."
     - run: echo "🍏 env varibale is $var1"
+    - run: echo "🍏 project env varibale is ${{vars.projectname}}"
+    - run: echo "repository name ${{github.repositoryUrl}}"
+    - run: echo "input to workflow is ${{input.number1}}"
     
     
