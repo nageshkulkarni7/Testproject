@@ -1,6 +1,9 @@
 name: custom demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
+
+env:
+  var1: first action with env
 jobs: 
   First-Manual-Action:
     runs-on: ubuntu-latest
@@ -9,5 +12,6 @@ jobs:
     - name: checkout repo
       uses : actions/checkout@v4
     - run: echo "🍏 This job's status is ${{ job.status }}."
+    - run: echo "🍏 env varibale is $var1"
     
     
