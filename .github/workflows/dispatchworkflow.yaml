@@ -1,0 +1,20 @@
+name: custom demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [workflow_dispatch]
+
+env:
+  var1: first action with env
+jobs: 
+  First-Manual-Action:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "🐧 This job is triggreed by ${{ github.actor }}  ${{ runner.os }} server hosted by GitHub!"
+    - name: checkout repo
+      uses : actions/checkout@v4
+    - run: echo "🍏 This job's status is ${{ job.status }}."
+    - run: echo "🍏 env varibale is $var1"
+    - run: echo "🍏 project env varibale is ${{vars.projectname}}"
+    - run: echo "repository name ${{github.repositoryUrl}}"
+    - run: echo "input to workflow is ${{ inputs.number1 }}"
+    
+    
