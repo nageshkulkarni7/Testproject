@@ -1,6 +1,6 @@
 name: custom demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on: [workflow_dispatch]
 
 env:
   var1: first action with env
